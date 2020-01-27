@@ -1,0 +1,6 @@
+-- https://leetcode.com/problems/rising-temperature/
+SELECT
+	A.ID AS ID
+FROM WEATHER A, WEATHER B
+WHERE (A.RECORDDATE - B.RECORDDATE) = 1
+	AND A.TEMPERATURE > B.TEMPERATURE
