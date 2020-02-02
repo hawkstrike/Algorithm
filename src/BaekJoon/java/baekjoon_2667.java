@@ -2,6 +2,7 @@ package BaekJoon.java;
 // https://www.acmicpc.net/problem/2667
 
 import java.util.*;
+import java.util.Queue;
 
 public class baekjoon_2667 {
 	static int area = 0;
@@ -22,7 +23,7 @@ public class baekjoon_2667 {
 		int n = Integer.parseInt(sc.nextLine());
 		int[][] field = new int[n+2][n+2];
 		boolean[][] v = new boolean[n+2][n+2];
-		List<Integer> list = new LinkedList<Integer>();
+		List<Integer> list = new LinkedList<>();
 
 		for(int i = 1; i < field.length-1; i++) {
 			String s = sc.nextLine();
@@ -45,7 +46,7 @@ public class baekjoon_2667 {
 	}
 
 	public static int bfs(int[][] field, boolean[][] v, int x, int y) {
-		Queue<coordinate> q = new LinkedList<coordinate>();
+		Queue<coordinate> q = new LinkedList<>();
 		coordinate c = new coordinate(x, y);
 		int[] dx = {-1, 1, 0, 0};
 		int[] dy = {0, 0, -1, 1};
