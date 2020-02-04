@@ -1,0 +1,5 @@
+-- https://leetcode.com/problems/classes-more-than-5-students/
+SELECT
+	CLASS
+FROM (SELECT CLASS, COUNT(DISTINCT (STUDENT)) AS STDUENT FROM COURSES GROUP BY CLASS)
+WHERE STDUENT >= 5;
