@@ -1,0 +1,13 @@
+-- https://leetcode.com/problems/human-traffic-of-stadium/
+SELECT
+	DISTINCT S1.ID
+		   , TO_CHAR(S1.VISIT_DATE, 'YYYY-MM-DD') AS VISIT_DATE
+		   , S1.PEOPLE
+FROM STADIUM S1, STADIUM S2, STADIUM S3
+WHERE ((S1.ID = S2.ID - 1 AND S1.ID = S3.ID - 2)
+	OR (S3.ID = S1.ID -1 AND S3.ID = S2.ID - 2)
+	OR (S3.ID = S2.ID - 1 AND S3.ID = S1.ID -2))
+  AND S1.PEOPLE >= 100
+  AND S2.PEOPLE >= 100
+  AND S3.PEOPLE >= 100
+ORDER BY S1.ID;
