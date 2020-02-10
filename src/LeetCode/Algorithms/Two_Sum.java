@@ -25,8 +25,6 @@ public class Two_Sum {
 			int diff = target - nums[i];
 			Integer value = hashMap.get(diff);
 
-			System.out.println("diff : " + diff + " | value : " + value);
-
 			if(value != null && !value.equals(i))
 				return new int[]{i, value};
 		}
