@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 import java.util.LinkedList;
 import java.util.List;

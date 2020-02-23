@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/defanging-an-ip-address/
 public class Defanging_an_IP_Address {

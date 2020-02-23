@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/reverse-integer/
 public class Reverse_Integer {

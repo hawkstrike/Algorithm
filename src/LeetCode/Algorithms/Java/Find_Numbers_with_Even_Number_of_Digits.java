@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 public class Find_Numbers_with_Even_Number_of_Digits {

@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 public class Subtract_the_Product_and_Sum_of_Digits_of_an_Integer {

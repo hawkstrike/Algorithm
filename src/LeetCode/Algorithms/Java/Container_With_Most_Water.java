@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/container-with-most-water/
 public class Container_With_Most_Water {

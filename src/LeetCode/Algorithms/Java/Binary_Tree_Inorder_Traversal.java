@@ -1,10 +1,11 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
-// https://leetcode.com/problems/binary-tree-postorder-traversal/
-public class Binary_Tree_Postorder_Traversal {
+// https://leetcode.com/problems/binary-tree-inorder-traversal/
+public class Binary_Tree_Inorder_Traversal {
 	public static class TreeNode {
 		int val;
 		TreeNode left;
@@ -26,7 +27,7 @@ public class Binary_Tree_Postorder_Traversal {
 		root.right.right = new TreeNode(8);
 		root.right.right.left = new TreeNode(9);
 		
-		List<Integer> list = postorderTraversal(root);
+		List<Integer> list = inorderTraversal(root);
 		
 		for (int i : list) {
 			System.out.print(i + " ");
@@ -34,10 +35,10 @@ public class Binary_Tree_Postorder_Traversal {
 		System.out.println();
 	}
 	
-	public static List<Integer> postorderTraversal(TreeNode root) {
+	public static List<Integer> inorderTraversal(TreeNode root) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		
-		postOrderLoop(root, list);
+		inOrderLoop(root, list);
 		
 		return list;
 		
@@ -94,16 +95,16 @@ public class Binary_Tree_Postorder_Traversal {
 		return list;*/
 	}
 	
-	public static void postOrderLoop(TreeNode root, List<Integer> list) {
+	public static void inOrderLoop(TreeNode root, List<Integer> list) {
 		if (root != null) {
-			if (root.right != null) {
-				postOrderLoop(root.right, list);
+			if (root.left != null) {
+				inOrderLoop(root.left, list);
 			}
 			
 			list.add(root.val);
 			
-			if (root.left != null) {
-				postOrderLoop(root.left, list);
+			if (root.right != null) {
+				inOrderLoop(root.right, list);
 			}
 		}
 	}

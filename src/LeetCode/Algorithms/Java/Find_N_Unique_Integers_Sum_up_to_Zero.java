@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
 public class Find_N_Unique_Integers_Sum_up_to_Zero {

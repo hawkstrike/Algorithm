@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/minimum-time-visiting-all-points/
 public class Minimum_Time_Visiting_All_Points {

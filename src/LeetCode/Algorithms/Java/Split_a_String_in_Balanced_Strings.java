@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/split-a-string-in-balanced-strings/
 public class Split_a_String_in_Balanced_Strings {

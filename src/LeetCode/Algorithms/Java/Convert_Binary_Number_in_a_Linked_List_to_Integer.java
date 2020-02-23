@@ -1,4 +1,4 @@
-package LeetCode.Algorithms;
+package LeetCode.Algorithms.Java;
 
 // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 public class Convert_Binary_Number_in_a_Linked_List_to_Integer {
