@@ -1,11 +1,6 @@
 package LeetCode.Algorithms.Java;
 
-import sun.awt.image.ImageWatched;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
-import java.util.stream.Stream;
 
 // https://leetcode.com/problems/maximum-69-number/
 public class Maximum_69_Number {
