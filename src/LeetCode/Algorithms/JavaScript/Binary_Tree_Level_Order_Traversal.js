@@ -11,36 +11,36 @@
  * @return {number[][]}
  */
 var levelOrder = function(root) {
-
-};let result = new Array();
-let queue = [];
-
-if (root != null) {
-	queue.unshift(root);
+	let result = new Array();
+	let queue = [];
 	
-	while (queue.length > 0) {
-		let levelArr = new Array();
-		let length = queue.length;
+	if (root != null) {
+		queue.unshift(root);
 		
-		for (let i = 0; i < length; i++) {
-			let curr = queue.pop();
+		while (queue.length > 0) {
+			let levelArr = new Array();
+			let length = queue.length;
 			
-			if (curr.left) {
-				queue.unshift(curr.left);
+			for (let i = 0; i < length; i++) {
+				let curr = queue.pop();
+				
+				if (curr.left) {
+					queue.unshift(curr.left);
+				}
+				
+				if (curr.right) {
+					queue.unshift(curr.right);
+				}
+				
+				levelArr.push(curr.val);
 			}
 			
-			if (curr.right) {
-				queue.unshift(curr.right);
-			}
-			
-			levelArr.push(curr.val);
+			result.push(levelArr);
 		}
-		
-		result.push(levelArr);
 	}
-}
-
-return result;
+	
+	return result;
+};
 
 function TreeNode(val) {
 	this.val = val;
