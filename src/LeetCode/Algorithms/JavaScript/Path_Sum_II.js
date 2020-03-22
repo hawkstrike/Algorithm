@@ -14,7 +14,7 @@
 var pathSum = function(root, sum) {
 	let result = [];
 	
-	const recurrentPathSum = (root, list = new Array(), curr = 0) => {
+	const recurrentPathSum = (root, list = [], curr = 0) => {
 		if (!root) {
 			return;
 		}

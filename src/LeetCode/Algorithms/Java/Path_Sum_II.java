@@ -2,7 +2,6 @@ package LeetCode.Algorithms.Java;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 // https://leetcode.com/problems/path-sum-ii/
 public class Path_Sum_II {
