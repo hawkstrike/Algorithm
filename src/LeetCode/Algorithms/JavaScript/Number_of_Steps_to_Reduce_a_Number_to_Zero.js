@@ -19,6 +19,6 @@ var numberOfSteps  = function(num) {
 	return result;*/
 };
 
-let num = 14;
+let num = 100;
 
 console.log(numberOfSteps(num));
