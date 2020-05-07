@@ -3,3 +3,8 @@
 out/*
 Algorithm.iml
 lombok.config
+/src/LeetCode/Algorithms/.idea/misc.xml
+/src/LeetCode/Algorithms/.idea/modules.xml
+/src/LeetCode/Algorithms/.idea/vcs.xml
+/src/LeetCode/Algorithms/.idea/workspace.xml
+/src/LeetCode/Algorithms/Algorithms.iml
