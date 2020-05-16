@@ -32,8 +32,6 @@ public class Maximum_Sum_Circular_Subarray {
 		int result2 = sum + kadane(A, 1, A.length - 1, -1);
 		int result3 = sum + kadane(A, 0, A.length - 2, -1);
 		
-		System.out.println("result1 : " + result1 + " | result2 : " + result2 + " | result3 : " + result3);
-		
 		return Math.max(result1, Math.max(result2, result3));
 	}
 	
@@ -69,8 +67,6 @@ public class Maximum_Sum_Circular_Subarray {
 			curr = sign * A[k] + Math.max(curr, 0);
 			result = Math.max(result, curr);
 		}
-		
-		System.out.println("result : " + result + " | curr : " + curr);
 		
 		return (int) result;
 	}
