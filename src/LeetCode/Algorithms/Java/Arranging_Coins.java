@@ -9,7 +9,7 @@ public class Arranging_Coins {
 	}
 	
 	public static int arrangeCoins(int n) {
-		/*if (n == 0) {
+		if (n == 0) {
 			return 0;
 		}
 		
@@ -19,7 +19,7 @@ public class Arranging_Coins {
 			n -= i++;
 		}
 		
-		return (i - 1);*/
-		return (int) (Math.sqrt(2 * (long) n + 0.25) - 0.5);
+		return (i - 1);
+		//return (int) (Math.sqrt(2 * (long) n + 0.25) - 0.5);
 	}
 }
