@@ -24,6 +24,11 @@ public class Remove_Linked_List_Elements {
 		int val = 6;
 		
 		ListNode result = removeElements(head, val);
+		
+		while (result != null) {
+			System.out.println(result.val);
+			result = result.next;
+		}
 	}
 	
 	public static ListNode removeElements(ListNode head, int val) {
