@@ -1,10 +1,5 @@
 package LeetCode.Algorithms.Java;
 
-import javafx.util.Pair;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-
 // https://leetcode.com/problems/first-unique-character-in-a-string/
 public class First_Unique_Character_in_a_String {
 	public static void main(String[] args) {

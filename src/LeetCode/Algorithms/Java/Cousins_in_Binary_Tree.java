@@ -1,7 +1,5 @@
 package LeetCode.Algorithms.Java;
 
-import javafx.util.Pair;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

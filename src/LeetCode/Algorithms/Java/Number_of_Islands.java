@@ -1,12 +1,28 @@
 package LeetCode.Algorithms.Java;
 
-import javafx.util.Pair;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 // https://leetcode.com/problems/number-of-islands/
 public class Number_of_Islands {
+	public static class Pair {
+		int first;
+		int second;
+		
+		public Pair(int first, int second) {
+			this.first = first;
+			this.second = second;
+		}
+		
+		public int getFirst() {
+			return this.first;
+		}
+		
+		public int getSecond() {
+			return this.second;
+		}
+	}
+	
 	public static void main(String[] args) {
 		/*char[][] grid = {{'1', '1', '1', '1', '0'},
 						{'1', '1', '0', '1', '0'},
@@ -36,22 +52,22 @@ public class Number_of_Islands {
 	}
 	
 	public static void bfs(char[][] grid, int x, int y) {
-		Queue<Pair<Integer, Integer>> q = new LinkedList<>();
+		Queue<Pair> q = new LinkedList<>();
 		int[] dx = {-1, 0, 1, 0};
 		int[] dy = {0, 1, 0, -1};
 		
-		q.add(new Pair<>(x, y));
+		q.add(new Pair(x, y));
 		
 		while (!q.isEmpty()) {
-			Pair<Integer, Integer> pair = q.poll();
+			Pair pair = q.poll();
 			
 			for (int i = 0; i < dx.length; i++) {
-				int currX = pair.getKey() + dx[i];
-				int currY = pair.getValue() + dy[i];
+				int currX = pair.getFirst() + dx[i];
+				int currY = pair.getSecond() + dy[i];
 				
 				if (currX >= 0 && currY >= 0 && currX < grid.length && currY < grid[0].length && grid[currX][currY] == '1') {
 					grid[currX][currY] = '0';
-					q.add(new Pair<>(currX, currY));
+					q.add(new Pair(currX, currY));
 				}
 			}
 		}
