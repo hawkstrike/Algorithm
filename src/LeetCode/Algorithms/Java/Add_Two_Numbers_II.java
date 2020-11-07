@@ -1,8 +1,5 @@
 package LeetCode.Algorithms.Java;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // https://leetcode.com/problems/add-two-numbers-ii/
 public class Add_Two_Numbers_II {
 	public static class ListNode {
