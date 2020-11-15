@@ -1,7 +1,5 @@
 package LeetCode.Algorithms.Java;
 
-import java.util.Hashtable;
-
 // https://leetcode.com/problems/counting-bits/
 public class Counting_Bits {
 	public static void main(String[] args) {
