@@ -21,9 +21,10 @@ public class Longest_Substring_with_At_Least_K_Repeating_Characters {
 			alphabetArr[s.charAt(i) - 'a']++;
 		}
 		
-		for (int i = 0; i < alphabetArr.length; i++) {
-			if (alphabetArr[i] < k && alphabetArr[i] > 0) {
+		for (char alphabet : alphabetArr) {
+			if (alphabet < k && alphabet > 0) {
 				flag = false;
+				break;
 			}
 		}
 		
