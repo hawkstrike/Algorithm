@@ -27,6 +27,8 @@ public class Pseudo_Palindromic_Paths_in_a_Binary_Tree {
 	}
 	
 	public static int pseudoPalindromicPaths(TreeNode root) {
+		count = 0;
+		
 		preOrder(root, 0);
 		
 		return count;
