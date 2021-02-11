@@ -1,7 +1,5 @@
 package LeetCode.Algorithms.Java;
 
-import java.util.HashMap;
-
 // https://leetcode.com/problems/valid-anagram/
 public class Valid_Anagram {
 	public static void main(String[] args) {
