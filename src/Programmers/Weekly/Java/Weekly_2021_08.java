@@ -1,4 +1,4 @@
-package Programmers.SkillCheck.Java.Weekly;
+package Programmers.Weekly.Java;
 
 import java.util.*;
 
