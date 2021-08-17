@@ -1,75 +1,66 @@
 package Programmers.SkillCheck.Java;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Level2_2 {
 	
 	public static void main(String[] args) {
-		int N = 5;
-		int[][] road = {{1, 2, 1},
-						{2, 3, 3},
-						{5, 2, 2},
-						{1, 4, 2},
-						{5, 3, 1}};
-		int K = 3;
-		/*int N = 6;
-		int[][] road = {{1, 2, 1},
-						{1, 3, 2},
-						{2, 3, 2},
-						{3, 4, 3},
-						{3, 5, 2},
-						{3, 5, 3},
-						{5, 6, 1}};
-		int K = 4;*/
+		String m = "ABCDEFG";
+		String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"};
 		
-		System.out.println(solution(N, road, K));
+		System.out.println(solution(m, musicinfos));
 	}
 	
-	public static int solution(int N, int[][] road, int K) {
-		Queue<int[]> queue = new LinkedList<>();
-		List<int[]>[] list = new LinkedList[N + 1];
-		int[] distance = new int[N + 1];
-		int result = 0;
+	public static String solution(String m, String[] musicinfos) {
+		String[][] musicSheetInfoArr = {{"C#", "c"}, {"D#", "d"}, {"F#", "f"}, {"G#", "g"}, {"A#", "a"}};
+		String musicName = "None";
+		int max = Integer.MIN_VALUE;
 		
-		for (int i = 1; i <= N; i++) {
-			list[i] = new LinkedList<>();
-			distance[i] = Integer.MAX_VALUE;
+		for (String[] musicSheetInfo : musicSheetInfoArr) {
+			m = m.replace(musicSheetInfo[0], musicSheetInfo[1]);
 		}
 		
-		for (int i = 0; i < road.length; i++) {
-			list[road[i][0]].add(new int[]{road[i][0], road[i][1], road[i][2]});
-			list[road[i][1]].add(new int[]{road[i][1], road[i][0], road[i][2]});
-		}
-		
-		queue.offer(new int[]{0, 1, 0});
-		distance[1] = 0;
-		
-		while (!queue.isEmpty()) {
-			int[] curr = queue.poll();
-			List<int[]> currPaths = list[curr[1]];
+		for (String musicInfo : musicinfos) {
+			String[] musicInfoArr = musicInfo.split(",");
+			LocalTime startTime = LocalTime.parse(musicInfoArr[0], DateTimeFormatter.ofPattern("HH:mm"));
+			LocalTime endTime = LocalTime.parse(musicInfoArr[1], DateTimeFormatter.ofPattern("HH:mm"));
+			int time = (endTime.getHour() - startTime.getHour()) * 60 + (endTime.getMinute() - startTime.getMinute());
+			String musicSheet = musicInfoArr[3];
+			StringBuffer fullMusicSheet = new StringBuffer();
 			
-			if (distance[curr[1]] < curr[2]) {
-				continue;
+			for (String[] musicSheetInfo : musicSheetInfoArr) {
+				musicSheet = musicSheet.replace(musicSheetInfo[0], musicSheetInfo[1]);
 			}
 			
-			for (int[] path : currPaths) {
-				int sum = curr[2] + path[2];
-				
-				if (distance[path[1]] > sum) {
-					queue.offer(new int[]{curr[1], path[1], sum});
-					distance[path[1]] = sum;
+			if (time > musicSheet.length()) {
+				for (int i = 0; i < time / musicSheet.length(); i++) {
+					fullMusicSheet.append(musicSheet);
 				}
+				
+				fullMusicSheet.append(musicSheet.substring(0, time % musicSheet.length()));
+			} else {
+				fullMusicSheet.append(musicSheet.substring(0, time));
+			}
+			
+			if (fullMusicSheet.toString().contains(m) && time > max) {
+				max = time;
+				musicName = musicInfoArr[2];
 			}
 		}
 		
-		for (int i = 1; i <= N; i++) {
-			if (distance[i] <= K) {
-				result++;
-			}
-		}
+		return musicName;
+	}
+	
+	public static class Music {
+		int time;
+		String musicName;
+		String musicSheet;
 		
-		return result;
+		public Music(int time, String musicName, String musicSheet) {
+			this.time = time;
+			this.musicName = musicName;
+			this.musicSheet = musicSheet;
+		}
 	}
 }

@@ -2,7 +2,7 @@ package Programmers.Weekly.Java;
 
 import java.util.*;
 
-public class Weekly_2021_08 {
+public class Weekly_2021_08_2 {
 	public static void main(String[] args) {
 		/*int[][] scores = {{100, 90, 98, 88, 65},
 						{50, 45, 99, 85, 77},
