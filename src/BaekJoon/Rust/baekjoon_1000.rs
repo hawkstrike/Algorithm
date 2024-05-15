@@ -1,5 +1,5 @@
 
-pub fn baekjoon_1000_solution() {
+pub fn baekjoon_1000() {
     let mut input = String::new();
     
     std::io::stdin().read_line(&mut input).unwrap();
