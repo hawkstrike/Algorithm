@@ -4,3 +4,5 @@ out/*
 src/RSQUARE
 Algorithm.iml
 lombok.config
+target/*
+lib/*
