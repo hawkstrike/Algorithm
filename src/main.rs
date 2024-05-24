@@ -10,6 +10,7 @@ use BaekJoon::Rust::baekjoon_10998::baekjoon_10998;
 use BaekJoon::Rust::baekjoon_11021::baekjoon_11021;
 use BaekJoon::Rust::baekjoon_11022::baekjoon_11022;
 use BaekJoon::Rust::baekjoon_15740::baekjoon_15740;
+use BaekJoon::Rust::baekjoon_2293::beakjoon_2293;
 use BaekJoon::Rust::baekjoon_2558::baekjoon_2558;
 
 mod BaekJoon;
@@ -27,5 +28,6 @@ fn main() {
     // baekjoon_11021();
     // baekjoon_11022();
     // baekjoon_15740();
-    baekjoon_1010();
+    // baekjoon_1010();
+    beakjoon_2293();
 }
