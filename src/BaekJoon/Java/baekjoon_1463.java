@@ -12,19 +12,18 @@ public class baekjoon_1463 {
 		int[] arr = new int[x + 1];
 
 		for(int i = 2; i < arr.length; i++) {
-			if((i % 3) == 0)
-				arr[i] = min(arr[i/3], arr[i-1]) + 1;
-			else if((i % 2) == 0)
-				arr[i] = min(arr[i/2], arr[i-1]) + 1;
-			else
-				arr[i] = arr[i-1] + 1;
+			arr[i] = arr[i - 1] + 1;
+			
+			if ((i % 3) == 0) {
+				arr[i] = Math.min(arr[i / 3] + 1, arr[i]);
+			}
+			
+			if ((i % 2) == 0) {
+				arr[i] = Math.min(arr[i / 2] + 1, arr[i]);
+			}
 		}
 
 		System.out.println(arr[x]);
 		br.close();
-	}
-
-	public static int min(int i, int j) {
-		return (i > j) ? j : i;
 	}
 }
