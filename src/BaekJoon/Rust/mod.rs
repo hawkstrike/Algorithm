@@ -25,3 +25,4 @@ pub mod baekjoon_1316;
 pub mod baekjoon_1476;
 pub mod baekjoon_1495;
 pub mod baekjoon_1546;
+pub mod baekjoon_1547;
