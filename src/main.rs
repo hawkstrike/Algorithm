@@ -36,7 +36,8 @@ use BaekJoon::Rust::baekjoon_1890::baekjoon_1890;
 use BaekJoon::Rust::baekjoon_1912::baekjoon_1912;
 use BaekJoon::Rust::baekjoon_1915::baekjoon_1915;
 use BaekJoon::Rust::baekjoon_1924::baekjoon_1924;
-use BaekJoon::Rust::baekjoon_2293::beakjoon_2293;
+use BaekJoon::Rust::baekjoon_1932::baekjoon_1932;
+use BaekJoon::Rust::baekjoon_2293::baekjoon_2293;
 use BaekJoon::Rust::baekjoon_2558::baekjoon_2558;
 
 mod BaekJoon;
@@ -55,7 +56,7 @@ fn main() {
     // baekjoon_11022();
     // baekjoon_15740();
     // baekjoon_1010();
-    // beakjoon_2293();
+    // baekjoon_2293();
     // baekjoon_1463();
     // baekjoon_1012();
     // baekjoon_1063();
@@ -81,5 +82,6 @@ fn main() {
     // baekjoon_1890();
     // baekjoon_1912();
     // baekjoon_1915();
-    baekjoon_1924();
+    // baekjoon_1924();
+    baekjoon_1932();
 }

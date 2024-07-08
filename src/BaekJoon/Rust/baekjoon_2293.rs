@@ -1,6 +1,6 @@
 use std::io::stdin;
 
-pub fn beakjoon_2293() {
+pub fn baekjoon_2293() {
     let mut line: String = String::new();
     
     stdin().read_line(&mut line).unwrap();
