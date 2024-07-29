@@ -41,3 +41,4 @@ pub mod baekjoon_1924;
 pub mod baekjoon_1932;
 pub mod baekjoon_1963;
 pub mod baekjoon_1978;
+pub mod baekjoon_1987;
