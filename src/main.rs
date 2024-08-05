@@ -42,6 +42,7 @@ use BaekJoon::Rust::baekjoon_1978::baekjoon_1978;
 use BaekJoon::Rust::baekjoon_1987::baekjoon_1987;
 use BaekJoon::Rust::baekjoon_2003::baekjoon_2003;
 use BaekJoon::Rust::baekjoon_2010::baekjoon_2010;
+use BaekJoon::Rust::baekjoon_2133::baekjoon_2133;
 use BaekJoon::Rust::baekjoon_2293::baekjoon_2293;
 use BaekJoon::Rust::baekjoon_2558::baekjoon_2558;
 
@@ -93,5 +94,6 @@ fn main() {
     // baekjoon_1978();
     // baekjoon_1987();
     // baekjoon_2003();
-    baekjoon_2010();
+    // baekjoon_2010();
+    baekjoon_2133();
 }
