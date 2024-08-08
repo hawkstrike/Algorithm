@@ -45,3 +45,4 @@ pub mod baekjoon_1987;
 pub mod baekjoon_2003;
 pub mod baekjoon_2010;
 pub mod baekjoon_2133;
+pub mod baekjoon_2146;
