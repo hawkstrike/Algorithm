@@ -47,3 +47,4 @@ pub mod baekjoon_2010;
 pub mod baekjoon_2133;
 pub mod baekjoon_2146;
 pub mod baekjoon_2156;
+pub mod baekjoon_2178;
